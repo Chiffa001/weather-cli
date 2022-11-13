@@ -1,5 +1,5 @@
-export const getArgs = (args: string[]): Record<string, string> =>
-  args.slice(2).reduce((acc, value, index, array) => {
+export const getArgs = (args: string[]): Record<string, string | boolean> =>
+  args.slice(2).reduce<Record<string, string | boolean>>((acc, value, index, array) => {
     if (value.charAt(0) !== '-') {
       return acc
     }
