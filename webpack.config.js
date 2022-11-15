@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path');
 
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'production';
 
 const config = {
   entry: './src/index.ts',
@@ -11,7 +11,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/i,
+        test: /\.ts$/i,
         loader: 'ts-loader',
         exclude: ['/node_modules/']
       }
@@ -20,13 +20,13 @@ const config = {
   resolve: {
     extensions: ['.ts', '.js']
   }
-}
+};
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = 'production'
+    config.mode = 'production';
   } else {
-    config.mode = 'development'
+    config.mode = 'development';
   }
-  return config
-}
+  return config;
+};
