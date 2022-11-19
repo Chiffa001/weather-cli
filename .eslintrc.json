@@ -13,6 +13,15 @@
     "rules": {
         "@typescript-eslint/strict-boolean-expressions": 0,
         "semi": [2, "always"],
-        "@typescript-eslint/semi": 0
+        "@typescript-eslint/semi": 0,
+        "no-return-await": "off",
+        "@typescript-eslint/return-await": 0,
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": ["warn", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "enums": "always-multiline"
+        }],
+        "@typescript-eslint/no-floating-promises": 0
     }
 }

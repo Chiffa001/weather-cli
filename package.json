@@ -2,14 +2,15 @@
   "name": "my-webpack-project",
   "version": "1.0.0",
   "description": "My webpack project",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "bin": {
-    "weather": "dist/main.js"
+    "weather": "dist/index.js"
   },
+  "type": "module",
   "scripts": {
-    "start": "node dist/main.js -d mogilev",
-    "build": "webpack",
-    "build:watch": "webpack --watch"
+    "start": "node --experimental-modules --es-module-specifier-resolution=node dist/index.js -d mogilev",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
   },
   "keywords": [],
   "author": "",
@@ -23,11 +24,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.7.1",
-    "ts-loader": "^9.4.1",
-    "ts-node": "^10.9.1",
-    "typescript": "*",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^4.10.0"
+    "typescript": "*"
   },
   "dependencies": {
     "axios": "^1.1.3"
